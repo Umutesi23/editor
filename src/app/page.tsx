@@ -1,112 +1,350 @@
+"use client";
 import Image from "next/image";
+import { Textarea } from "@/components/ui/textarea";
+import icon from "./favicon.ico";
+import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
+  const [cText1, setText1] = useState(
+    " # Welcome to my React Markdown Previewer!"
+  );
+
+  function handlechange(e: any) {
+    setText1(e.target.value);
+  }
+  const [cText2, setText2] = useState("## This is a sub-heading...");
+
+  function handlechange2(e: any) {
+    setText2(e.target.value);
+  }
+  const [cText3, setText3] = useState(
+    "### And here's some other cool stuff:  "
+  );
+
+  function handlechange3(e: any) {
+    setText3(e.target.value);
+  }
+
+  const [cText4, setText4] = useState(
+    "Heres some code, `<div></div>`, between 2 backticks.  "
+  );
+
+  function handlechange4(e: any) {
+    setText4(e.target.value);
+  }
+  const [cText5, setText5] = useState(
+    "// this is multi-line code: function anotherExample(firstLine, lastLine){if (firstLine == '```' && lastLine == '```') { return multiLineCode;}"
+  );
+
+  function handlechange5(e: any) {
+    setText5(e.target.value);
+  }
+  const [cText6, setText6] = useState(
+    "You can also make text **bold**... whoa!  "
+  );
+
+  function handlechange6(e: any) {
+    setText6(e.target.value);
+  }
+  const [cText7, setText7] = useState("Or _italic_.  ");
+
+  function handlechange7(e: any) {
+    setText7(e.target.value);
+  }
+  const [cText8, setText8] = useState("Or... wait for it... **_both!_**  ");
+
+  function handlechange8(e: any) {
+    setText8(e.target.value);
+  }
+  const [cText9, setText9] = useState(
+    "And feel free to go crazy ~~crossing stuff out~~.  "
+  );
+
+  function handlechange9(e: any) {
+    setText9(e.target.value);
+  }
+  const [cText10, setText10] = useState("##There's also ");
+
+  function handlechange10(e: any) {
+    setText10(e.target.value);
+  }
+  const [cText11, setText11] = useState("https://www.freecodecamp.org");
+
+  function handlechange11(e: any) {
+    setText11(e.target.value);
+  }
+  const [cText12, setText12] = useState("Wild Header ");
+
+  function handlechange12(e: any) {
+    setText12(e.target.value);
+  }
+  const [cText13, setText13] = useState("Wild Header ");
+
+  function handlechange13(e: any) {
+    setText13(e.target.value);
+  }
+  const [cText14, setText14] = useState("Wild Header ");
+
+  function handlechange14(e: any) {
+    setText14(e.target.value);
+  }
+  const [cText15, setText15] = useState("Your content can ");
+
+  function handlechange15(e: any) {
+    setText15(e.target.value);
+  }
+
+  const [cText16, setText16] = useState("Your content can ");
+
+  function handlechange16(e: any) {
+    setText16(e.target.value);
+  }
+  const [cText17, setText17] = useState("Your content can ");
+
+  function handlechange17(e: any) {
+    setText17(e.target.value);
+  }
+  const [cText18, setText18] = useState(" And of course there are lists.  ");
+
+  function handlechange18(e: any) {
+    setText18(e.target.value);
+  }
+  const [cText19, setText19] = useState("     Some are bulleted.  ");
+
+  function handlechange19(e: any) {
+    setText19(e.target.value);
+  }
+  const [cText20, setText20] = useState("And there are numbered lists too.  ");
+
+  function handlechange20(e: any) {
+    setText20(e.target.value);
+  }
+  const [cText21, setText21] = useState(". Use just 1s if you want!  ");
+
+  function handlechange21(e: any) {
+    setText21(e.target.value);
+  }
+  const [cText22, setText22] = useState(
+    "https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg"
+  );
+
+  function handlechange22(e: any) {
+    setText22(e.target.value);
+  }
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-[#a8dadc]">
+      <div className=" m-auto w-[40vw] h-[30vh] border-[0.1vh] border-black shadow-2xl">
+        <div className=" w-[100%] h-[15%] bg-[#6DC2C5] p-[0.5vw] flex gap-[1vw] font-semibold">
+          <Image src={icon} alt="icon" className=" w-[1vw] h-[2vh]"></Image>
+          Editor
+        </div>
+        <div className=" bg-[#D3EDEE] h-[85%] overflow-auto p-[0.7vh]	">
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange}
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            {cText1}
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange2}
+          >
+            {cText2}
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange3}
+          >
+            {cText3}
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange4}
+          >
+            {cText4}
+          </textarea>
+          <textarea className=" bg-transparent resize-none w-[100%]">
+            ```
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange5}
+          >
+            {cText5}
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange6}
+          >
+            {cText6}
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange7}
+          >
+            {cText7}
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange8}
+          >
+            {cText8}
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange9}
+          >
+            {cText9}
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange10}
+          >
+            {cText10}
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange11}
+          >
+            {cText11}
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange12}
+          >
+            {cText12}
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange13}
+          >
+            {cText13}
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange14}
+          >
+            {cText14}
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange15}
+          >
+            {cText15}
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange16}
+          >
+            {cText16}
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange17}
+          >
+            {cText17}
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange18}
+          >
+            {cText18}
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange19}
+          >
+            {cText19}
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange20}
+          >
+            {cText20}
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange21}
+          >
+            {cText21}
+          </textarea>
+          <textarea
+            className=" bg-transparent resize-none w-[100%]"
+            onChange={handlechange22}
+          >
+            {cText22}
+          </textarea>
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
+      <br></br>
+      <div className=" m-auto w-[50vw] h-[130vh] border-[0.1vh] border-black shadow-2xl">
+        <div className=" w-[100%] h-[5%] bg-[#6DC2C5] p-[0.5vw] flex gap-[1vw] font-semibold">
+          <Image src={icon} alt="icon" className=" w-[1vw] h-[2vh]"></Image>
+          Previewer
+        </div>
+        <div className=" bg-[#D3EDEE] h-[95%] p-[2vh] overflow-auto">
+          <p className=" font-bold text-[2vw]"> {cText1}</p>
+          <hr className=" bg-black h-[0.3vh] w-[100%]"></hr>
+          <br></br>
+          <p className=" font-semibold text-[1.5vw]"> {cText2}</p>
+          <hr className=" bg-black h-[0.2vh] w-[100%]"></hr>
+          <br></br>
+          <p className=" font-medium text-[1.3vw]"> {cText3}</p>
+          <br></br>
+          <p className=" text-[1.3vw]"> {cText4}</p> <br></br>
+          <p className=" text-[1.3vw] bg-white"> {cText5}</p> <br></br>
+          <p className=" text-[1.3vw] font-bold"> {cText6}</p> <br></br>
+          <p className=" text-[1.3vw] italic"> {cText7}</p> <br></br>
+          <p className=" text-[1.3vw] font-bold italic"> {cText8}</p> <br></br>
+          <p
+            className=" text-[1.3vw] "
+            style={{ textDecoration: "line-through" }}
+          >
+            {cText9}
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <br></br>
+          <p className=" text-[1.3vw]"> {cText10}</p> <br></br>
+          <Link href={cText11} className=" underline text-[blue]">
+            Link
+          </Link>
+          <br></br>
+          <table>
+            <tr>
+              <th className=" p-[1vw] border-[0.1vh] border-black">
+                {cText12}
+              </th>
+              <th className=" p-[1vw] border-[0.1vh] border-black">
+                {cText13}
+              </th>
+              <th className=" p-[1vw] border-[0.1vh] border-black">
+                {cText14}
+              </th>
+            </tr>
+            <tr>
+              <td className=" p-[1vw] border-[0.1vh] border-black">
+                {cText15}
+              </td>
+              <td className=" p-[1vw] border-[0.1vh] border-black">
+                {cText16}
+              </td>
+              <td className=" p-[1vw] border-[0.1vh] border-black">
+                {cText17}
+              </td>
+            </tr>
+          </table>
+          <br></br>
+          <ul>
+            <li>{cText18}</li>
+            <li className=" list-disc">{cText19}</li>
+          </ul>
+          <br></br>
+          <ol className=" list-decimal">
+            <li>{cText20}</li>
+            <li>{cText21}</li>
+          </ol>
+        </div>
       </div>
     </main>
   );
